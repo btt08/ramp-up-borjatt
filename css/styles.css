@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
+/* Variables, fuente y reset */
 :root {
   --color-accent: #e22b23;
   --gradient: linear-gradient(170deg, #101010 10%, #1f1f1f 100%);
+  --red-border: 1px var(--color-accent) solid;
+  --shadow: 0px 0px 15px var(--color-accent);
   font-family: 'Space mono', sans-serif;
 }
 
@@ -14,44 +17,35 @@
   box-sizing: border-box;
 }
 
+/*
+      /////////////////////////////////
+      /////////////////////////////////
+      /////////AUXILIARES//////////////
+      /////////////////////////////////
+      /////////////////////////////////
+*/
+
 .wrapper {
   background-color: #1f1f1f;
   background-image: var(--gradient);
-  height: 100%;
+  min-height: 100vh;
+  color: #FFF;
 }
 
-#header-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.header-logo {
-  max-height: 40px;
-  margin: 15px;
-}
-
-#navbar {
-  font-size: 1.2rem;
-  list-style: none;
-  padding: 10px;
-  display: flex;
-}
-
-#navbar li:not(:last-child) {
-  margin-right: 10px;
-  padding-right: 10px;
-  border-right: 1px solid #fff;
+.container {
+  width: 80%;
+  margin: 50px auto 25px auto;
+  border-radius: 15px;
+  border: var(--red-border);
+  box-shadow: var(--shadow);
 }
 
 a,
 a:visited,
 a:active {
-  margin: 4px;
   text-decoration: none;
   color: #fff;
-  padding: 10px;
-  display: inline-block;
+  padding: 5px;
 }
 
 a:hover,
@@ -60,13 +54,21 @@ a:hover,
   background-color: var(--color-accent);
 }
 
+ul {
+  list-style: none;
+  display: flex;
+}
+
+/*
+      /////////////////////////////////
+      /////////////////////////////////
+      ///////////INICIO////////////////
+      /////////////////////////////////
+      /////////////////////////////////
+*/
+
 #main-container {
-  width: 80%;
-  min-height: 600px;
-  margin: 50px auto;
-  border-radius: 15px;
-  border: 1px var(--color-accent) solid;
-  box-shadow: 0px 0px 15px var(--color-accent);
+  min-height: 550px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -74,10 +76,10 @@ a:hover,
 }
 
 #section-central {
-  margin: 20px;
+  margin: 20px 15px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 #title {
@@ -95,19 +97,18 @@ a:hover,
 }
 
 #title .third-word {
-  font-size: 5em;
-  text-shadow: 0 0 30px var(--color-accent);
+  font-size: 4em;
+  text-shadow: var(--shadow);
   padding-left: 30px;
 }
 
 #section-nav {
   display: flex;
-  align-items: center;
   justify-content: space-around;
 }
 
 #section-nav .card {
-  width: 300px;
+  min-width: 200px;
   max-width: 30%;
   height: 50px;
   padding: 10px;
@@ -115,51 +116,331 @@ a:hover,
   box-shadow: 0px -1px 15px var(--color-accent);
   color: #fff;
   text-align: center;
-  font-size: 1.2rem;
   transition: 0.5s ease-in;
   align-self: flex-end;
   display: flex;
-  justify-content: stretch;
   flex-direction: column;
 }
 
-#section-nav .card.one:hover {
-  height: 120px;
-}
-
-#section-nav .card.two:hover {
-  height: 120px;
-}
-
+#section-nav .card.one:hover,
+#section-nav .card.two:hover,
 #section-nav .card.three:hover {
   height: 120px;
 }
 
 #section-nav .card .title {
   font-size: 1.5rem;
+  padding: 0;
   margin-bottom: 15px;
 }
 
-#section-nav .card .content {
-  font-size: 1rem;
+/*
+      /////////////////////////////////
+      /////////////////////////////////
+      ///////////BIOGRAFÍA/////////////
+      /////////////////////////////////
+      /////////////////////////////////
+*/
+
+#section-personal-data table,
+#section-personal-data th,
+#section-personal-data td,
+#section-personal-data tr,
+#section-personal-data caption {
+  border: 1px solid var(--color-accent);
+}
+
+#section-table {
+  width: 95%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#section-table th,
+#section-table td {
+  padding: 4px 0;
+}
+
+
+/*
+      /////////////////////////////////
+      /////////////////////////////////
+      ///////////CONTACTO//////////////
+      /////////////////////////////////
+      /////////////////////////////////
+*/
+
+#contact-form {
+  width: 60%;
+  margin: 25px auto;
+}
+
+#contact-form * {
+  padding: 5px;
+}
+
+fieldset,
+input:focus {
+  box-shadow: var(--shadow);
+}
+
+input:not([type="radio"]):not([type="color"]):not([type="file"]) {
+  display: block;
+  width: 95%;
+  margin: 7px auto;
+}
+
+label[for="aboutMe"] {
+  display: block;
+  margin-top: 10px;
+}
+
+#aboutMe {
+  display: block;
+  min-width: 95%;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+#buttons {
+  display: flex;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background-color: var(--color-accent);
+  color: #fff;
+  border-radius: 15px;
+  border: none;
+  min-width: 100px;
+  max-width: 140px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/*
+      /////////////////////////////////
+      /////////////////////////////////
+      ///////////GALERIA///////////////
+      /////////////////////////////////
+      /////////////////////////////////
+*/
+
+.galery {
+  max-width: 500px;
+  position: relative;
+}
+
+#section-galery {
+  height: 700px;
+  background-color: #1f1f1f;
+  background-image: url("../img/lfc.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video {
+  position: absolute;
+  max-width: 100%;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*
+      /////////////////////////////////
+      /////////////////////////////////
+      ///////////COMUNES/////////////
+      /////////////////////////////////
+      /////////////////////////////////
+*/
+
+#header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-logo {
+  max-height: 40px;
+  margin: 15px;
+}
+
+#navbar {
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+#navbar li:not(:last-child) {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #fff;
 }
 
 #footer-main {
   margin: 0 auto;
   padding-bottom: 10px;
-  font-size: 1.3rem;
-  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
 }
 
 #footer-main .socials {
-  list-style: none;
-  display: flex;
+  font-size: 1.3rem;
 }
 
 #footer-main .socials li {
   padding-right: 10px;
+}
+
+.socials a,
+.socials a:visited,
+.socials a:active {
+  padding: 5px;
+}
+
+/*
+      /////////////////////////////////
+      /////////////////////////////////
+      /////////////MEDIA///////////////
+      /////////////////////////////////
+      /////////////////////////////////
+*/
+
+@media(max-width:1400px) {
+  #title .first-word {
+    font-size: 2em;
+  }
+
+  #title .second-word {
+    font-size: 3em;
+  }
+
+  #title .third-word {
+    font-size: 4em;
+  }
+
+  .section-logo {
+    width: 300px;
+  }
+
+  input[type="color"],
+  input[type="file"] {
+    display: block;
+    margin-left: 7px;
+  }
+}
+
+@media(max-width:1200px) {
+  #section-central {
+    flex-direction: column;
+  }
+}
+
+@media(max-width:900px) {
+  #header-main {
+    flex-direction: column;
+  }
+
+  #title p {
+    text-align: center;
+  }
+
+  #title .first-word {
+    font-size: 1.5em;
+  }
+
+  #title .second-word {
+    font-size: 2em;
+    padding: 0;
+  }
+
+  #title .third-word {
+    font-size: 3em;
+    padding: 0;
+  }
+}
+
+@media(max-width:768px) {
+  #main-container {
+    overflow: auto;
+  }
+
+  #section-nav {
+    flex-direction: column;
+  }
+
+  #section-nav .card {
+    margin: 20px;
+    height: 150px;
+    align-self: center;
+  }
+
+  #section-nav .card.one:hover,
+  #section-nav .card.two:hover,
+  #section-nav .card.three:hover {
+    height: 150px;
+  }
+}
+
+@media(max-width:580px) {
+  #navbar {
+    flex-direction: column;
+  }
+
+  #navbar li:not(:last-child) {
+    border-right: none;
+  }
+
+  #navbar li {
+    border-bottom: 1px solid #fff;
+    padding: 5px 0;
+  }
+
+  a,
+  a:visited,
+  a:active {
+    font-size: 1rem;
+    padding: 0;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  a:hover,
+  .active {
+    border-radius: 10px;
+    background-color: var(--color-accent);
+  }
+
+  #main-container {
+    margin: 15px auto;
+  }
+
+  #title .first-word {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  #title .second-word {
+    font-size: 1.3em;
+    text-align: center;
+  }
+
+  #title .third-word {
+    font-size: 1.7em;
+    text-align: center;
+  }
+
+  .section-logo {
+    margin-top: 20px;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  #contact-form {
+    min-width: 80%;
+    max-width: 80%;
+  }
+
 }
