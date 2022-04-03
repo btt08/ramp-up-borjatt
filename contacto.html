@@ -10,26 +10,191 @@
           content="Borja Toledo">
     <meta name="description"
           content="Página contacto como parte de la prueba del ramp-up" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+          href="./css/styles.css">
     <title>Contacto</title>
   </head>
   <body>
     <div class="wrapper">
       <header id="header-main">
-        <h1>Bienvenido</h1>
-        <nav id="navbar">
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="biografia.html">Biograf&iacute;a</a></li>
-            <li><a href="galeria.html">Galería</a></li>
-            <li><a href="contacto.html"
-                 class="active">Contacto</a></li>
+        <img src="./img/logo.png"
+             alt="Logo the bridge campus"
+             class="header-logo">
+        <nav>
+          <ul id="navbar">
+            <li>
+              <a href="index.html"
+                 referrerpolicy="no-referrer">
+                <i class="fa fa-house"></i> Inicio</a>
+            </li>
+            <li>
+              <a href="biografia.html"
+                 referrerpolicy="no-referrer">
+                <i class="fa fa-book"></i> Biograf&iacute;a</a>
+            </li>
+            <li>
+              <a href="galeria.html"
+                 referrerpolicy="no-referrer">
+                <i class="fa fa-photo-film"></i> Galería</a>
+            </li>
+            <li>
+              <a href="contacto.html"
+                 referrerpolicy="no-referrer"
+                 class="active">
+                <i class="fa fa-envelope"></i> Contacto</a>
+            </li>
           </ul>
         </nav>
       </header>
-      <main id="main-container">
+      <main class="container">
+        <section id="section-contact-form">
+          <form action=""
+                id="contact-form">
+            <fieldset>
+              <legend>Datos personales</legend>
+              <label for="name">Nombre</label>
+              <input type="text"
+                     name="name"
+                     id="name"
+                     autofocus
+                     required />
+              <label for="lastName">Apellidos</label>
+              <input type="text"
+                     name="lastName"
+                     id="lastName" />
+              <label for="age">Edad</label>
+              <input type="number"
+                     name="age"
+                     id="age" />
+              <label for="birthDate">Fecha de nacimiento</label>
+              <input type="date"
+                     name="birthDate"
+                     id="birthDate" />
+              <span>Sexo</span>
+              <input type="radio"
+                     name="sex"
+                     id="rad-male"
+                     value="male"
+                     checked>
+              <label for="rad-male">H</label>
+              <input type="radio"
+                     name="sex"
+                     id="rad-female"
+                     value="female">
+              <label for="rad-male">M</label>
+              <fieldset>
+                <legend>Sobre ti</legend>
 
+                <label for="favSports">Deporte favorito</label>
+                <input list="favSports"
+                       name="favSports">
+                <datalist id="favSports">
+                  <option value="Futbol">
+                  <option value="Baloncesto">
+                  <option value="Tenis">
+                </datalist>
+
+                <label for="favColor">Color favorito</label>
+                <input type="color"
+                       name="favColor"
+                       id="favColor">
+
+                <label for="cv">A&nacute;adir CV</label>
+                <input type="file"
+                       name="cv"
+                       id="cv" />
+
+                <label for="aboutMe">Cuentanos alguna curiosidad</label>
+
+                <textarea name="aboutMe"
+                          id="aboutMe"
+                          cols="15"
+                          rows="5"></textarea>
+              </fieldset>
+
+              <fieldset id="contact">
+                <legend>Datos de contacto</legend>
+                <label for="phoneNum">Número de teléfono</label>
+                <input type="tel"
+                       name="phoneNum"
+                       id="phoneNum"
+                       required />
+
+                <label for="email">Dirección de email</label>
+                <input type="email"
+                       name="email"
+                       id="email"
+                       required />
+
+                <label for="cityBirth">Ciudad de residencia</label>
+                <select name="cityBirth"
+                        id="cityBirth">
+                  <optgroup label="Centro">
+                    <option value="Oviedo">Oviedo</option>
+                    <option value="Gijón">Gijón</option>
+                    <option value="Avilés">Avilés</option>
+                    <option value="Mieres">Mieres</option>
+                  </optgroup>
+                  <optgroup label="Oriente">
+                    <option value="Llanes">Llanes</option>
+                    <option value="CangasdeOnís">Cangas de Onís</option>
+                    <option value="Ribadesella">Ribadesella</option>
+                  </optgroup>
+                  <optgroup label="Occidente">
+                    <option value="Taramundi">Taramundi</option>
+                    <option value="Vegadeo">Vegadeo</option>
+                    <option value="CangasdeNarcea">Cangas de Narcea</option>
+                  </optgroup>
+                </select>
+              </fieldset>
+              <div id="buttons">
+                <input type="submit"
+                       value="Enviar formulario" />
+                <input type="reset"
+                       value="Reset formulario">
+              </div>
+            </fieldset>
+          </form>
+        </section>
       </main>
-      <footer id="footer-main"></footer>
+      <footer id="footer-main">
+        <ul class="socials">
+          <li>
+            <a href="https://facebook.com"
+               target="_blank"
+               referrerpolicy="no-referrer">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com"
+               target="_blank"
+               referrerpolicy="no-referrer">
+              <i class="fab fa-twitter"> </i>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com"
+               target="_blank"
+               referrerpolicy="no-referrer">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com"
+               target="_blank"
+               referrerpolicy="no-referrer">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright">2022&copy; Todos los derechos reservados</p>
+      </footer>
     </div>
   </body>
 </html>

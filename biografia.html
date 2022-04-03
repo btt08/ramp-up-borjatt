@@ -10,26 +10,115 @@
           content="Borja Toledo">
     <meta name="description"
           content="Página biografia como parte de la prueba del ramp-up" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+          href="./css/styles.css">
     <title>Biografía</title>
   </head>
   <body>
     <div class="wrapper">
       <header id="header-main">
-        <h1>Bienvenido</h1>
-        <nav id="navbar">
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="biografia.html"
-                 class="active">Biograf&iacute;a</a></li>
-            <li><a href="galeria.html">Galería</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+        <img src="./img/logo.png"
+             alt="Logo the bridge campus"
+             class="header-logo">
+        <nav>
+          <ul id="navbar">
+            <li>
+              <a href="index.html"
+                 referrerpolicy="no-referrer">
+                <i class="fa fa-house"></i> Inicio</a>
+            </li>
+            <li>
+              <a href="biografia.html"
+                 referrerpolicy="no-referrer"
+                 class="active">
+                <i class="fa fa-book"></i> Biograf&iacute;a</a>
+            </li>
+            <li>
+              <a href="galeria.html"
+                 referrerpolicy="no-referrer">
+                <i class="fa fa-photo-film"></i> Galería</a>
+            </li>
+            <li>
+              <a href="contacto.html"
+                 referrerpolicy="no-referrer">
+                <i class="fa fa-envelope"></i> Contacto</a>
+            </li>
           </ul>
         </nav>
       </header>
-      <main id="main-container">
-
+      <main class="container">
+        <section id="section-personal-data">
+          <table id="section-table">
+            <caption class="table-caption">Datos personales</caption>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th colspan="2">Apellidos</th>
+                <th>F. Nacimiento</th>
+                <th>Sexo</th>
+                <th>Estudios</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Borja</td>
+                <td>Toledo</td>
+                <td>Trapiella</td>
+                <td>12/10/1990</td>
+                <td>Escaso</td>
+                <td>
+                  <p>DAI</p>
+                  <p>DAW</p>
+                  <p>DAM</p>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="6">Aquí iría algo interesante</td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
       </main>
-      <footer id="footer-main"></footer>
+      <footer id="footer-main">
+        <ul class="socials">
+          <li>
+            <a href="https://facebook.com"
+               target="_blank"
+               referrerpolicy="no-referrer">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com"
+               target="_blank"
+               referrerpolicy="no-referrer">
+              <i class="fab fa-twitter"> </i>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com"
+               target="_blank"
+               referrerpolicy="no-referrer">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com"
+               target="_blank"
+               referrerpolicy="no-referrer">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright">2022&copy; Todos los derechos reservados</p>
+      </footer>
     </div>
   </body>
 </html>
