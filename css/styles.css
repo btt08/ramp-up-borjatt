@@ -40,21 +40,24 @@
   box-shadow: var(--shadow);
 }
 
-a,
-a:visited,
-a:active {
+.link,
+.link:visited,
+.link:active {
   text-decoration: none;
   color: #fff;
   padding: 5px;
 }
 
-a:hover,
+
+
+.link:hover,
 .active {
   border-radius: 10px;
   background-color: var(--color-accent);
 }
 
-ul {
+#navbar,
+.socials {
   list-style: none;
   display: flex;
 }
@@ -151,7 +154,7 @@ ul {
 }
 
 #section-table {
-  width: 95%;
+  width: 80%;
   margin: 50px auto;
   text-align: center;
 }
@@ -179,43 +182,76 @@ ul {
   padding: 5px;
 }
 
-fieldset,
-input:focus {
+#contact-form fieldset,
+#contact-form input:focus {
   box-shadow: var(--shadow);
 }
 
-input:not([type="radio"]):not([type="color"]):not([type="file"]) {
-  display: block;
+#contact-form input:not([type="radio"]):not([type="color"]):not([type="file"]) {
   width: 95%;
-  margin: 7px auto;
+  margin: 5px auto;
 }
 
-label[for="aboutMe"] {
-  display: block;
-  margin-top: 10px;
+#field-personal-data {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
 }
 
-#aboutMe {
-  display: block;
+#field-personal-data .sex {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#field-about-me {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  border-radius: 15px;
+}
+
+.colour {
+  display: flex;
+}
+
+#tArea-aboutMe {
   min-width: 95%;
   resize: none;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+}
+
+#field-contact {
+  margin: 0 10px;
+  border-radius: 15px;
+}
+
+#field-contact select {
+  font-weight: 600;
+  margin: 10px auto 30px;
+  width: 95%;
+}
+
+#field-contact select option {
+  font-weight: 600;
 }
 
 #buttons {
   display: flex;
 }
 
-input[type="submit"],
-input[type="reset"] {
+.btn {
   background-color: var(--color-accent);
   color: #fff;
   border-radius: 15px;
   border: none;
-  min-width: 100px;
-  max-width: 140px;
+  max-width: 40%;
   height: 40px;
   cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #e2372e;
 }
 
 /*
@@ -294,9 +330,9 @@ input[type="reset"] {
   padding-right: 10px;
 }
 
-.socials a,
-.socials a:visited,
-.socials a:active {
+.socials link,
+.socials link:visited,
+.socials link:active {
   padding: 5px;
 }
 
@@ -336,6 +372,10 @@ input[type="reset"] {
   #section-central {
     flex-direction: column;
   }
+
+  #section-central .section-logo {
+    margin-block: 20px;
+  }
 }
 
 @media(max-width:900px) {
@@ -372,7 +412,6 @@ input[type="reset"] {
   }
 
   #section-nav .card {
-    margin: 20px;
     height: 150px;
     align-self: center;
   }
@@ -389,25 +428,25 @@ input[type="reset"] {
     flex-direction: column;
   }
 
-  #navbar li:not(:last-child) {
-    border-right: none;
-  }
-
   #navbar li {
     border-bottom: 1px solid #fff;
     padding: 5px 0;
   }
 
-  a,
-  a:visited,
-  a:active {
+  #navbar li:not(:last-child) {
+    border-right: none;
+  }
+
+  link,
+  link:visited,
+  link:active {
     font-size: 1rem;
     padding: 0;
     text-decoration: none;
     color: #fff;
   }
 
-  a:hover,
+  link:hover,
   .active {
     border-radius: 10px;
     background-color: var(--color-accent);
@@ -439,8 +478,14 @@ input[type="reset"] {
   }
 
   #contact-form {
-    min-width: 80%;
-    max-width: 80%;
+    width: 95%;
   }
 
+  #buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    min-width: 95%;
+  }
 }

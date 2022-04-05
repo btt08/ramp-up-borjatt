@@ -29,23 +29,26 @@
           <ul id="navbar">
             <li>
               <a href="../index.html"
-                 referrerpolicy="no-referrer">
+                 referrerpolicy="no-referrer"
+                 class="link">
                 <i class="fa fa-house"></i> Inicio</a>
             </li>
             <li>
               <a href="biografia.html"
-                 referrerpolicy="no-referrer">
+                 referrerpolicy="no-referrer"
+                 class="link">
                 <i class="fa fa-book"></i> Biograf&iacute;a</a>
             </li>
             <li>
               <a href="galeria.html"
-                 referrerpolicy="no-referrer">
+                 referrerpolicy="no-referrer"
+                 class="link">
                 <i class="fa fa-photo-film"></i> Galería</a>
             </li>
             <li>
               <a href="contacto.html"
                  referrerpolicy="no-referrer"
-                 class="active">
+                 class="link active">
                 <i class="fa fa-envelope"></i> Contacto</a>
             </li>
           </ul>
@@ -55,7 +58,7 @@
         <section id="section-contact-form">
           <form action=""
                 id="contact-form">
-            <fieldset>
+            <fieldset id="field-personal-data">
               <legend>Datos personales</legend>
               <label for="name">Nombre</label>
               <input type="text"
@@ -75,19 +78,21 @@
               <input type="date"
                      name="birthDate"
                      id="birthDate" />
-              <span>Sexo</span>
-              <input type="radio"
-                     name="sex"
-                     id="rad-male"
-                     value="male"
-                     checked>
-              <label for="rad-male">H</label>
-              <input type="radio"
-                     name="sex"
-                     id="rad-female"
-                     value="female">
-              <label for="rad-male">M</label>
-              <fieldset>
+              <div class="sex">
+                <span>Sexo</span>
+                <input type="radio"
+                       name="sex"
+                       id="rad-male"
+                       value="male"
+                       checked>
+                <label for="rad-male">H</label>
+                <input type="radio"
+                       name="sex"
+                       id="rad-female"
+                       value="female">
+                <label for="rad-male">M</label>
+              </div>
+              <fieldset id="field-about-me">
                 <legend>Sobre ti</legend>
 
                 <label for="favSports">Deporte favorito</label>
@@ -98,26 +103,28 @@
                   <option value="Baloncesto">
                   <option value="Tenis">
                 </datalist>
+                <div class="colour">
+                  <label for="favColor">Color favorito</label>
+                  <input type="color"
+                         name="favColor"
+                         id="favColor">
+                </div>
 
-                <label for="favColor">Color favorito</label>
-                <input type="color"
-                       name="favColor"
-                       id="favColor">
 
                 <label for="cv">A&nacute;adir CV</label>
                 <input type="file"
                        name="cv"
                        id="cv" />
 
-                <label for="aboutMe">Cuentanos alguna curiosidad</label>
+                <label for="tArea-aboutMe">Cuentanos alguna curiosidad</label>
 
-                <textarea name="aboutMe"
-                          id="aboutMe"
+                <textarea name="tArea-aboutMe"
+                          id="tArea-aboutMe"
                           cols="15"
                           rows="5"></textarea>
               </fieldset>
 
-              <fieldset id="contact">
+              <fieldset id="field-contact">
                 <legend>Datos de contacto</legend>
                 <label for="phoneNum">Número de teléfono</label>
                 <input type="tel"
@@ -154,9 +161,11 @@
               </fieldset>
               <div id="buttons">
                 <input type="submit"
-                       value="Enviar formulario" />
+                       value="Enviar formulario"
+                       class="btn" />
                 <input type="reset"
-                       value="Reset formulario">
+                       value="Reset formulario"
+                       class="btn">
               </div>
             </fieldset>
           </form>
@@ -167,28 +176,32 @@
           <li>
             <a href="https://facebook.com"
                target="_blank"
-               referrerpolicy="no-referrer">
+               referrerpolicy="no-referrer"
+               class="link">
               <i class="fab fa-facebook"></i>
             </a>
           </li>
           <li>
             <a href="https://twitter.com"
                target="_blank"
-               referrerpolicy="no-referrer">
+               referrerpolicy="no-referrer"
+               class="link">
               <i class="fab fa-twitter"> </i>
             </a>
           </li>
           <li>
             <a href="https://youtube.com"
                target="_blank"
-               referrerpolicy="no-referrer">
+               referrerpolicy="no-referrer"
+               class="link">
               <i class="fab fa-youtube"></i>
             </a>
           </li>
           <li>
             <a href="https://linkedin.com"
                target="_blank"
-               referrerpolicy="no-referrer">
+               referrerpolicy="no-referrer"
+               class="link">
               <i class="fab fa-linkedin"></i>
             </a>
           </li>
