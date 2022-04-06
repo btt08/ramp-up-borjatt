@@ -199,6 +199,7 @@
 #field-personal-data {
   display: flex;
   flex-direction: column;
+  min-width: 100%;
   border-radius: 15px;
 }
 
@@ -211,6 +212,7 @@
 #field-about-me {
   display: flex;
   flex-direction: column;
+  min-width: 100%;
   margin: 0 10px;
   border-radius: 15px;
 }
@@ -226,6 +228,9 @@
 }
 
 #field-contact {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
   margin: 0 10px;
   border-radius: 15px;
 }
@@ -492,6 +497,11 @@
 
   #contact-form {
     width: 95%;
+  }
+
+  #field-about-me,
+  #field-contact {
+    margin: 10px 0;
   }
 
   #buttons {
