@@ -409,6 +409,11 @@
     font-size: 3em;
     padding: 0;
   }
+
+  #contact-form {
+    margin-top: 10px;
+    width: 80%;
+  }
 }
 
 @media(max-width:768px) {
@@ -438,7 +443,6 @@
   #section-table-small {
     display: block;
   }
-
 }
 
 @media(max-width:580px) {
