@@ -153,7 +153,8 @@
   border: 1px solid var(--color-accent);
 }
 
-#section-table {
+#section-table,
+#section-table-small {
   width: 80%;
   margin: 50px auto;
   text-align: center;
@@ -164,6 +165,9 @@
   padding: 4px 0;
 }
 
+#section-table-small {
+  display: none;
+}
 
 /*
       /////////////////////////////////
@@ -421,6 +425,15 @@
   #section-nav .card.three:hover {
     height: 150px;
   }
+
+  #section-table {
+    display: none;
+  }
+
+  #section-table-small {
+    display: block;
+  }
+
 }
 
 @media(max-width:580px) {
